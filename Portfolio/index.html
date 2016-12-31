@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset= "utf-8">
+		<meta http-equiv= "X-UA-Compatible" content= "IE=edge">
+		<meta name= "viewport" content= "width=device-width, initial-scale=1.0">
+		<!-- My stylesheet -->
+		<link rel= "stylesheet" href= "css/style.css">
+		<!-- For social media icons-->
+		<link rel= "stylesheet" href= "http://weloveiconfonts.com/api/?family=brandico">
+		<!-- Bootstrap -->
+		<link rel= "stylesheet" href= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<!--Script for tooltip-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<!-- Fonts -->
+		<link href= "https://fonts.googleapis.com/css?family=Lato%7CEconomica%7CMarcellus+SC%7CTinos" rel= "stylesheet">
+		<!-- Title -->
+		<title>Portfolio</title>
+	</head>
+	<!-- body of Portfolio -->
+	<body class="body-style">
+		<!--main container-->
+		<div class= "container">
+			<header>
+				<div class= "row">
+					<div class= "col-md-6">
+						<div class= "logo">
+							<figure>
+								<img src= "images/logo.svg" alt= "logo" class= "logo-style">
+							</figure>
+						</div>
+					</div>
+					<div class= "col-md-6">
+						<div class= "header-text text-uppercase">
+							<div class= "header-title">
+								<h1 class= "header-title-name">Kinjal <strong class= "header-title-surname">Parmar</strong> </h1>
+							</div>
+							<h3 class= "header-sub-title">Front-end Developer</h3>
+						</div>
+					</div>
+				</div>
+			</header>
+			<!--navbar for navigating through the website-->
+			<nav class= "navbar navbar-inverse text-center">
+				<div class= "navbar-header">
+					<!--using hamburger icon for small screen size devices-->
+					<button type= "button" class= "navbar-toggle" data-toggle= "collapse" data-target= "#myNavbar">
+						<span class= "icon-bar"></span>
+						<span class= "icon-bar"></span>
+						<span class= "icon-bar"></span>
+					</button>
+				</div>
+				<!--collapsing the navbar-->
+				<div class= "collapse navbar-collapse" id= "myNavbar">
+					<ul class= "nav navbar-nav navbar-right">
+						<li><a href= "#about" class="nav-element">About</a></li>
+						<li><a href= "#featured_project" class="nav-element">Featured Projects</a></li>
+						<li><a href= "#contact" class="nav-element">Contact</a></li>
+					</ul>
+				</div>
+			</nav>
+			<!--horizontal row-->
+			<div class= "row">
+				<div class= "col-md-12">
+					<hr>
+				</div>
+			</div>
+			<!--main-image-->
+			<div class= "row" id="about">
+				<div class= "col-md-12">
+					<figure>
+						<img src= "images/main-image.svg" alt= "main-image" class= "main-img"/>
+					</figure>
+				</div>
+			</div>
+			<!--featured work - main content of website-->
+			<div class= "content" id= "featured_project">
+				<div class= "row">
+					<div class= "col-md-12 content-title">
+						<h2>Featured Work &#128187;</h2>
+					</div>
+				</div>
+				<div class= "content-elements">
+					<div class= "row arrange-elements text-center">
+						<article class= "col-md-3">
+							<div class= "element1-inner card">
+								<div class= "element-image">
+									<figure>
+										<img class= "img-responsive element-img-size" src= "images/html.svg" alt= "html icon">
+									</figure>
+								</div>
+								<div class= "element-details">
+									<div class= "element-title">
+										<h3 class= "element-title-name">Mockup to article</h3>
+									</div>
+									<div class= "element-description">
+										<div class= "element-info" data-placement= "bottom" data-toggle= "tooltip" title= "Click here for more Info">
+											<button type= "button" class= "btn btn-primary1 btn-sm" data-toggle= "modal" data-target= "#modal_1">View Info  &#128064;</button>
+											<!-- Modal -->
+											<div class= "modal fade" id= "modal_1" role= "dialog">
+												<div class= "modal-dialog">
+													<!-- Modal content-->
+													<div class= "modal-content">
+														<div class= "modal-header">
+															<button type= "button" class= "close" data-dismiss= "modal">&times;</button>
+															<h3 class= "modal-title">Mockup to HTML</h3>
+														</div>
+														<div class= "modal-body">
+															<figure>
+																<img src= "images/modal1_image.png" alt= "mock-up-to-article screenshot" class= "modal-image">
+															</figure>
+															<p class= "modal-text">This is the first project under <strong>Udacity Front-End Nanodegree course.</strong> It basically includes translating a mockup to html. Given the mockup of website, one have to recreate it with HTML. I have use resourses like MDN and other documentation to make it look exactly like the mockup image.</p>
+														</div>
+														<div class= "modal-footer">
+															<button type= "button" class= "btn btn-default" data-dismiss= "modal">Close</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class= "git-link">
+											<a href= "https://github.com/kinjalparmar/udacity-fend-project-1" data-toggle= "tooltip" data-placement= "bottom" title= "Click to view code on GitHub" class= "brandico-github icon-color-github"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class= "col-md-3">
+							<div class= "element2-inner card">
+								<div class= "element-image">
+									<figure>
+										<img class= "img-responsive element-img-size" src= "images/css.svg" alt= "css icon">
+									</figure>
+								</div>
+								<div class= "element-details">
+									<div class= "element-title">
+										<h3 class= "element-title-name">Animal Trading Card</h3>
+									</div>
+									<div class= "element-description">
+										<div class= "element-info" data-placement= "bottom" data-toggle= "tooltip" title= "Click here for more Info">
+											<button type= "button" class= "btn btn-primary1 btn-sm" data-toggle= "modal" data-target= "#modal_2">View Info &#128064;</button>
+											<!-- Modal -->
+											<div class= "modal fade" id= "modal_2" role= "dialog">
+												<div class= "modal-dialog">
+													<!-- Modal content-->
+													<div class= "modal-content">
+														<div class= "modal-header">
+															<button type= "button" class= "close" data-dismiss= "modal">&times;</button>
+															<h3 class= "modal-title">Animal Trading Card</h3>
+														</div>
+														<div class= "modal-body">
+															<figure>
+																<img src= "images/modal2_image.png" alt= "animal trading card screenshot" class= "modal-image">
+															</figure>
+															<p class= "modal-text">This is the second project under <strong>Udacity Front-End Nanodegree course.</strong> Given a design prototype, one have to recreate it with CSS and HTML. I have use Udacity Lesson's and other resources like MDN to turn a basic design prototype into a stylish card on the web.</p>
+														</div>
+														<div class= "modal-footer">
+															<button type= "button" class= "btn btn-default" data-dismiss= "modal">Close</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class= "git-link">
+											<a href= "https://github.com/kinjalparmar/udacity-fend-project-2" data-toggle= "tooltip" data-placement= "bottom" title= "Click to view code on GitHub" class= "brandico-github icon-color-github"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class= "col-md-3">
+							<div class= "element3-inner card">
+								<div class= "element-image">
+									<figure>
+										<img class= "img-responsive element-img-size" src= "images/portfolio.svg" alt= "Portfolio icon">
+									</figure>
+								</div>
+								<div class= "element-details">
+									<div class= "element-title">
+										<h3 class= "element-title-name">Build a Portfolio Site</h3>
+									</div>
+									<div class= "element-description">
+										<div class= "element-info" data-placement= "bottom" data-toggle= "tooltip" title= "Click here for more Info">
+											<button type= "button" class= "btn btn-primary1 btn-sm" data-toggle= "modal" data-target= "#modal_3" >View Info &#128064;</button>
+											<!-- Modal -->
+											<div class= "modal fade" id= "modal_3" role= "dialog">
+												<div class= "modal-dialog">
+													<!-- Modal content-->
+													<div class= "modal-content">
+														<div class= "modal-header">
+															<button type= "button" class= "close" data-dismiss= "modal">&times;</button>
+															<h3 class= "modal-title">Build a Portfolio Site</h3>
+														</div>
+														<div class= "modal-body">
+															<figure>
+																<img src= "images/modal3_image.png" alt= "Portfolio screenshot" class= "modal-image">
+															</figure>
+															<p class= "modal-text">This is the third project under <strong>Udacity Front-End Nanodegree course.</strong> Provided with a design mockup as a PDF-file the task is to replicate that design in HTML and CSS. This website is responsive and display images, descriptions and links to projects which I have completed under the course the Nanodegree program.</p>
+														</div>
+														<div class= "modal-footer">
+															<button type= "button" class= "btn btn-default" data-dismiss= "modal">Close</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class= "git-link">
+											<a href= "https://github.com/kinjalparmar/udacity-fend-project-3" data-toggle= "tooltip" data-placement= "bottom" title= "Click to view code on GitHub" class= "brandico-github icon-color-github"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class= "col-md-3">
+							<div class= "element4-inner card">
+								<div class= "element-image">
+									<figure>
+										<img class= "img-responsive element-img-size" src= "images/resume.svg" alt= "resume icon">
+									</figure>
+								</div>
+								<div class= "element-details">
+									<div class= "element-title">
+										<h3 class= "element-title-name">Online Resume</h3>
+									</div>
+									<div class= "element-description">
+										<div class= "element-info" data-placement= "bottom" data-toggle= "tooltip" title= "Click here for more Info">
+											<button type= "button" class= "btn btn-primary1 btn-sm" data-toggle= "modal" data-target= "#modal_4">View Info &#128064;</button>
+											<!-- Modal -->
+											<div class= "modal fade" id= "modal_4" role= "dialog">
+												<div class= "modal-dialog">
+													<!-- Modal content-->
+													<div class= "modal-content">
+														<div class= "modal-header">
+															<button type= "button" class= "close" data-dismiss= "modal">&times;</button>
+															<h3 class= "modal-title">Online Resume</h3>
+														</div>
+														<div class= "modal-body">
+															<figure>
+																<img src= "images/modal4_image.png" alt= "resume screenshot" class= "modal-image">
+															</figure>
+															<p class= "modal-text">This is the fourth project under <strong>Udacity Front-End Nanodegree course.</strong>In this project an online resume is to be build by writing JavaScript that will combine my personal information with pre-written HTML and CSS templates.</p>
+														</div>
+														<div class= "modal-footer">
+															<button type= "button" class= "btn btn-default" data-dismiss= "modal">Close</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class= "git-link">
+											<a href= "#" data-toggle= "tooltip" data-placement= "bottom" title= "Click to view code on GitHub" class= "brandico-github icon-color-github"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
+			<!-- footer -->
+			<footer id= "contact">
+				<div class= "row">
+					<div class= "col-md-12 social-icon text-center">
+						<a href= "https://twitter.com/kinjal100" class= "brandico-twitter-bird icon-hover icon-color-twitter"></a>
+						<a href= "https://www.facebook.com/kinjalparmar1992" class= "brandico-facebook-rect icon-hover icon-color-fb"></a>
+						<a href= "https://plus.google.com/u/0/117877043103208366476" class= "brandico-googleplus-rect icon-hover icon-color-gplus"></a>
+					</div>
+				</div>
+				<div class= "row">
+					<div class= "col-md-12 text-center">
+						<p class= "copyright-text">&#169; 2016 Kinjal Parmar</p>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!-- using tooltip -->
+		<script>
+			$(document).ready(function(){
+				$('[data-toggle= "tooltip"]').tooltip();
+			});
+		</script>
+	</body>
+</html>
