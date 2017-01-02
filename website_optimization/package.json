@@ -11,6 +11,6 @@
   "devDependencies": {
     "grunt-contrib-uglify": "^2.0.0",
     "grunt-critical": "^0.2.2",
-    "grunt-tinyimg": "^1.0.0"
+    "grunt-responsive-images": "^1.10.1"
   }
 }

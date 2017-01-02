@@ -1,4 +1,5 @@
 module.exports = function (grunt) {
+
 grunt.initConfig({
   critical: {
     dist: {
@@ -9,20 +10,36 @@ grunt.initConfig({
       src: 'original.html',
       // The destination file
       dest: 'index.html'
-      }
-    },
-  tinyimg: {
-    dynamic: {
+    }
+  },
+  responsive_images: {
+    dev: {
+      options: {
+        engine: 'im',
+        sizes: [{
+          width: 800 ,
+          suffix: 'large',
+          quality: 50
+        }, {
+          width: 600 ,
+          suffix: 'medium',
+          quality: 50
+        }, {
+          width: 400 ,
+          suffix: 'small',
+          quality: 50
+        }]
+      },
       files: [{
         expand: true,
-        src: ['*.{png,jpg,svg}'],
+        src: ['*.{gif,jpg,png,jpeg}'],
         cwd: 'img/',
         dest: 'images_new/'
       }, {
         expand: true,
-        src: ['*.{png,jpg,svg}'],
+        src: ['*.{gif,jpg,png,jpeg}'],
         cwd: 'views/images',
-        dest: 'images_new/'
+        dest: 'views/images_new/'
       }]
     }
   },
@@ -41,9 +58,9 @@ grunt.initConfig({
 
   // Load the plugins
   grunt.loadNpmTasks('grunt-critical');
-  grunt.loadNpmTasks('grunt-tinyimg');
+  grunt.loadNpmTasks('grunt-responsive-images');
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
   // Default tasks.
-  grunt.registerTask('default', ['critical','tinyimg','uglify']);
+  grunt.registerTask('default', ['critical','responsive_images','uglify']);
 };
