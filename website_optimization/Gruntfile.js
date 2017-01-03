@@ -18,15 +18,15 @@ grunt.initConfig({
         engine: 'im',
         sizes: [{
           width: 800 ,
-          suffix: 'large',
+          suffix: '_large',
           quality: 50
         }, {
           width: 600 ,
-          suffix: 'medium',
+          suffix: '_medium',
           quality: 50
         }, {
-          width: 400 ,
-          suffix: 'small',
+          width: 100 ,
+          suffix: '_small',
           quality: 50
         }]
       },
@@ -48,9 +48,20 @@ grunt.initConfig({
       files: [{
         expand: true,
         cwd: 'js/',
-        src: '*.js',
+        src: ['*.js', '!*.min.js'],
         dest: 'js/',
         ext: '.min.js'
+      }]
+    }
+  },
+  cssmin: {
+    my_target: {
+      files: [{
+        expand: true,
+        cwd: 'css/',
+        src: ['*.css', '!*.min.css'],
+        dest: 'css/',
+        ext: '.min.css'
       }]
     }
   }
@@ -60,7 +71,8 @@ grunt.initConfig({
   grunt.loadNpmTasks('grunt-critical');
   grunt.loadNpmTasks('grunt-responsive-images');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
   // Default tasks.
-  grunt.registerTask('default', ['critical','responsive_images','uglify']);
+  grunt.registerTask('default', ['critical','responsive_images','uglify','cssmin']);
 };
