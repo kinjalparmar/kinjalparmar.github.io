@@ -18,7 +18,7 @@ You can also run it from : [kinjalparmar.github.io/website_optimization/](https:
 |Getting Rid of Jank| Computational Efficiency|Time to resize pizzas is less than 5 ms using the pizza size slider on the `views/pizza.html` page.|
 
 ##### Achieved Goals :  
-**1. PageSpeed Score** : `index.html` is optimized to achieved PageSpeed score of 92/100.
+**1. PageSpeed Score** : `index.html` is optimized to achieved PageSpeed score of 95/100 for both mobile and desktop.
 * Can check [my optimization score](https://kinjalparmar.github.io/website_optimization/) on : [Pagespeed Insights](https://developers.google.com/speed/pagespeed/insights/)
 
 **2. Getting Rid of Jank** : `main.js` is optimized to achieve a frame rate of *60fps(Frame Rate per second)* when scrolling. Also reduced the time to resize pizzas in `pizza.html` to less than 5 ms.
@@ -28,13 +28,52 @@ You can also run it from : [kinjalparmar.github.io/website_optimization/](https:
     - Average time to resize pizzas when slider is used
 
 ##### Project folder information :
-* `original.html` is the unoptimized file having low speed score.
-*  `index.html` is the optimized file.
-*  `css` folder contains the original and minified `.css` files.
-*  `js` folder contains the original and minified `.js` files.
-*  `img` folder contains the original unoptimized images.
-*  `images_new` and `view/images_new` contains optimized images.
-*  The main files to focus in `views` folder are `pizza.html` and the optimized `js/main.js`. 
+The project contains : Two main directories - `src` and `dist`, `index.html` file and `grunt` files. 
+
+**`src` directory-** : Contains the source code. It has the following files and folders:
+* `index.html`: unoptimized `html` file having low speed score.
+* `css` and `views/css` folders contains the unminified `.css` files.
+*  `js` folder contains the unuglified `.js` files.
+*  `img` and `views/images` folders contains the original unoptimized images.
+* `views/pizza.html` is optimized a little bit by adding minied `.css` and `.js` files.
+* `views/js/main.js` is an optimized javascript file. It is optimized to obtain the second goal- getting rid of **Jank**.
+* `index.html` : unoptimized `html` file having low speed score.
+* `css` : contains the `.css` files necessary for styling the pages.
+* `js` : contains the `.js` files.
+* `img` : contains the original unoptimized images.
+* `views`: The folder containing items for the second goal of the project.
+    * `pizza.html` : It is the main file which is to be optimized with the help of `main.js` to get rid of jank. 
+    * `css` : contains the `.css` files necessary for styling the pages.
+    * `js` : optimized javascript file.
+    * `images` : contains the original unoptimized images.
+* `project-2048.html`, `project-mobile.html` and `project-webperf.html` are the other html files.
+
+**`dist` directory-** : Contains the production code. It has the following files and folders:
+* `dist` folder which is further divided into `css`, `images` and `js` folders which contains minified, uglified and compressed files obtained using grunt.
+
+**Grunt Files :** `Gruntfile.js` and `package.json`
+
+**`index.html`** is an optimized html file which is also the entry point of the project. It is optimized to obtain the **PageSpeed** goal.
+
+##### Using Grunt :
+If you are new to Grunt and want to run the grunt files for thid project you need to follow the following steps:
+1.**Install node.js :**  Download and follow the install instructions for node.js here: http://nodejs.org/
+2.**Install grunt-cli (the Grunt command line interface):** grunt-cli docs: http://gruntjs.com/getting-started.
+``` 
+npm install -g grunt-cli 
+```
+3.You can either install each plugin individually from the command line but as we already have `package.json` file simpy do the following:
+```
+npm install 
+```
+4.**Run Grunt :**
+We already have Gruntgile.js so the last thing we need to do is run Grunt. From the command line `cd` to the root directory of the project and run grunt:
+```
+grunt
+```
+The work is done inside the src folder and Grunt will minify/uglify/compress all those files and save them into the dist folders.
+
+> **Note :** `index.html` and `pizza-min.png` are the two files which are further modified and compressed. You need to see **Optimization Details** of this **READEME** for more details.
 
 ##### Optimization Details :
 To achieve the goal, I have made the following optimizations :

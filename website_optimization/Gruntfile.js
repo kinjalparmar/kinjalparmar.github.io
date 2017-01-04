@@ -1,13 +1,14 @@
 module.exports = function (grunt) {
 
 grunt.initConfig({
+  pkg: grunt.file.readJSON('package.json'),
   critical: {
     dist: {
       options: {
         base: './'
       },
       // The source file
-      src: 'original.html',
+      src: 'src/index.html',
       // The destination file
       dest: 'index.html'
     }
@@ -33,13 +34,13 @@ grunt.initConfig({
       files: [{
         expand: true,
         src: ['*.{gif,jpg,png,jpeg}'],
-        cwd: 'img/',
-        dest: 'images_new/'
+        cwd: 'src/img/',
+        dest: 'dist/images/'
       }, {
         expand: true,
         src: ['*.{gif,jpg,png,jpeg}'],
-        cwd: 'views/images',
-        dest: 'views/images_new/'
+        cwd: 'src/views/images',
+        dest: 'dist/images/'
       }]
     }
   },
@@ -47,9 +48,16 @@ grunt.initConfig({
     my_target: {
       files: [{
         expand: true,
-        cwd: 'js/',
+        cwd: 'src/js/',
         src: ['*.js', '!*.min.js'],
-        dest: 'js/',
+        dest: 'dist/js/',
+        ext: '.min.js'
+      },
+	  {
+        expand: true,
+        cwd: 'src/views/js/',
+        src: ['*.js', '!*.min.js'],
+        dest: 'dist/js/',
         ext: '.min.js'
       }]
     }
@@ -58,21 +66,38 @@ grunt.initConfig({
     my_target: {
       files: [{
         expand: true,
-        cwd: 'css/',
+        cwd: 'src/css/',
         src: ['*.css', '!*.min.css'],
-        dest: 'css/',
+        dest: 'dist/css/',
+        ext: '.min.css'
+      },
+	  {
+        expand: true,
+        cwd: 'src/views/css/',
+        src: ['*.css', '!*.min.css'],
+        dest: 'dist/css/',
         ext: '.min.css'
       }]
     }
-  }
-});
+  },
+    
+    /* Generate the images directory if it is missing */
+    mkdir: {
+      dev: {
+        options: {
+          create: ['dist/images','dist/css','dist/js']
+        }
+      }
+    }
+  });
 
   // Load the plugins
   grunt.loadNpmTasks('grunt-critical');
   grunt.loadNpmTasks('grunt-responsive-images');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-mkdir');
 
   // Default tasks.
-  grunt.registerTask('default', ['critical','responsive_images','uglify','cssmin']);
+  grunt.registerTask('default', ['mkdir','critical','responsive_images','uglify','cssmin']);
 };
