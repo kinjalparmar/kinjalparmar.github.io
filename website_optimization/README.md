@@ -57,6 +57,7 @@ The project contains : Two main directories - `src` and `dist`, `index.html` fil
 
 ##### Using Grunt :
 If you are new to Grunt and want to run the grunt files for thid project you need to follow the following steps:
+
 1.**Install node.js :**  Download and follow the install instructions for node.js here: http://nodejs.org/
 2.**Install grunt-cli (the Grunt command line interface):** grunt-cli docs: http://gruntjs.com/getting-started.
 ``` 
@@ -90,6 +91,7 @@ To achieve the goal, I have made the following optimizations :
     - uglify `.js`
     - compress images
 * Further reduced the size of `pizzeria-100small.jpg` using [http://optimizilla.com/](http://optimizilla.com/) and rename it as : `pizzeria_min.jpg`.
+* Screenshot of PageSpeed Test:
 
 ![PageSpeed Optimization](src/img/pagespeed_screentshot.png)
 
