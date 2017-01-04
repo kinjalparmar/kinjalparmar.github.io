@@ -9,7 +9,7 @@ This is the submission for Udacity's **Website Optimization** Project for the **
 2. Open index.html in a web browser
 You can also run it from : [kinjalparmar.github.io/website_optimization/](https://kinjalparmar.github.io/website_optimization/)
 
-##### Project Goal :
+### Project Goal :
 
 |Optimizations|Criteria|Goal|
 |:-------------:|:-------------:|:-----:|
@@ -17,7 +17,7 @@ You can also run it from : [kinjalparmar.github.io/website_optimization/](https:
 |Getting Rid of Jank| Frame Rate|Optimise `views/js/main.js` to make `views/pizza.html` render with a consistent frame-rate at 60fps when scrolling. |
 |Getting Rid of Jank| Computational Efficiency|Time to resize pizzas is less than 5 ms using the pizza size slider on the `views/pizza.html` page.|
 
-##### Achieved Goals :  
+### Achieved Goals :  
 **1. PageSpeed Score** : `index.html` is optimized to achieved PageSpeed score of 95/100 for both mobile and desktop.
 * Can check [my optimization score](https://kinjalparmar.github.io/website_optimization/) on : [Pagespeed Insights](https://developers.google.com/speed/pagespeed/insights/)
 
@@ -27,7 +27,7 @@ You can also run it from : [kinjalparmar.github.io/website_optimization/](https:
     - Average scripting time to generate last 10 frames
     - Average time to resize pizzas when slider is used
 
-##### Project folder information :
+### Project folder information :
 The project contains : Two main directories - `src` and `dist`, `index.html` file and `grunt` files. 
 
 **`src` directory-** : Contains the source code. It has the following files and folders:
@@ -55,9 +55,7 @@ The project contains : Two main directories - `src` and `dist`, `index.html` fil
 
 **`index.html`** is an optimized html file which is also the entry point of the project. It is optimized to obtain the **PageSpeed** goal.
 
-##### Using Grunt :
-If you are new to Grunt and want to run the grunt files for thid project you need to follow the following steps:
-
+### Using Grunt : If you are new to Grunt and want to run the grunt files for this project you need to follow the following steps:
 1.**Install node.js :**  Download and follow the install instructions for node.js here: http://nodejs.org/
 2.**Install grunt-cli (the Grunt command line interface):** grunt-cli docs: http://gruntjs.com/getting-started.
 ``` 
@@ -76,7 +74,7 @@ The work is done inside the src folder and Grunt will minify/uglify/compress all
 
 > **Note :** `index.html` and `pizza-min.png` are the two files which are further modified and compressed. You need to see **Optimization Details** of this **READEME** for more details.
 
-##### Optimization Details :
+### Optimization Details :
 To achieve the goal, I have made the following optimizations :
 
 **Page Speed Optimizations :**
@@ -91,7 +89,7 @@ To achieve the goal, I have made the following optimizations :
     - uglify `.js`
     - compress images
 * Further reduced the size of `pizzeria-100small.jpg` using [http://optimizilla.com/](http://optimizilla.com/) and rename it as : `pizzeria_min.jpg`.
-* Screenshot of PageSpeed Test:
+* Screenshot of PageSpeed test:
 
 ![PageSpeed Optimization](src/img/pagespeed_screentshot.png)
 
