@@ -91,7 +91,7 @@ To achieve the goal, I have made the following optimizations :
     - compress images
 * Further reduced the size of `pizzeria-100small.jpg` using [http://optimizilla.com/](http://optimizilla.com/) and rename it as : `pizzeria_min.jpg`.
 
-![PageSpeed Optimization](img/pagespeed_screentshot.png)
+![PageSpeed Optimization](src/img/pagespeed_screentshot.png)
 
 **Achieving 60 fps in the pizza.html page** 
 
