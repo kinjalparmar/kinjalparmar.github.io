@@ -7,6 +7,7 @@ This is the submission for Udacity's **Feed Reader Testing Project** for the **F
 ### How to Run 
 1. Download this project or clone [repository](https://github.com/kinjalparmar/udacity-fend-project-8) through Git. 
 2. Open index.html in a web browser
+
 **OR**
 You can run it from : [kinjalparmar.github.io/feed_reader/](https://kinjalparmar.github.io/feed_reader/)
 
