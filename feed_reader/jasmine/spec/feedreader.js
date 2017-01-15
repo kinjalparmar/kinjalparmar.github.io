@@ -112,9 +112,9 @@ $(function() {
 
             // Load feeds
             loadFeed(0, function() {
-                $previousFeed = $('.header-title').html();
+                previousFeed = $('.feed').html();
                 loadFeed(1, function() {
-                    $newFeed = $('.html-title').html();
+                    newFeed = $('.feed').html();
                     done();
                 });
             });
@@ -122,7 +122,7 @@ $(function() {
 
         // Make sure that the content of new feed is different
         it('should be new stuff', function(done) {
-            expect($previousFeed).not.toBe($newFeed);
+            expect(previousFeed).not.toBe(newFeed);
             done();
         });
     });
