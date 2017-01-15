@@ -6,7 +6,7 @@ This is the submission for Udacity's **Feed Reader Testing Project** for the **F
 
 ### How To Run
 
-* Download the zip folder or clone [repo](https://github.com/kinjalparmar/fend) to your Desktop.
+* Download the zip folder or clone [repo](https://github.com/kinjalparmar/feed_reader) to your Desktop.
 * Open the index.html file in any modern browser.
 
 ### Viewing test results
