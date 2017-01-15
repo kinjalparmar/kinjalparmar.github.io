@@ -94,7 +94,7 @@ $(function() {
             loadFeed(0, done);
         });
         it('has added entries', function(done) {
-            expect($('.feed .entry').length).not.toBe(0);
+            expect($('.feed .entry').length).toBeGreaterThan(0);
             done();
         });
     });
